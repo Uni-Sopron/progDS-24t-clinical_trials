@@ -1,4 +1,4 @@
-# Klinikai próbák Adatainak Elemzése
+# Klinikai Pvennevveróbák Adatainak Elemzése
 
 A program egy CSV fájlból származó klinikai próbák adatainak elemzésére szolgál. A szkript különböző Julia csomagokat használ az adatok kezelésére, statisztikai elemzésére és vizualizálására.
 
@@ -33,7 +33,7 @@ end
 ```
 3. `display_summary_statistics(df)`
 
-Ez a függvény megjeleníti a numerikus oszlopok összegző statisztikáit a DataFrame-ben.
+Ez a függvény megjeleníti a numerikus oszlopok összegző statisztikáit a DataFrame-ben. Ennek outputján látszik, hogy a részvételi létszám mediánja 124, míg az átlaga 440. Ez valószínűleg a majdnem 85000-es kiugró maximumnak köszönhető, ezért a későbbiekben több grafikonhoz is a legfeljebb 2000 fős próbák vizsgálatát javaslom.
 
 ```julia
 function display_summary_statistics(df)
@@ -69,7 +69,7 @@ end
 
 ![](histogram_enrollment_max.png)
 
-Jól látható, hogy a klinikai próbák résztvevőinek száma az esetek többségében kevesebb, mint 100. Ez részben köszöhető az ismeretek hiányának, hiszen nagyon kevesen ismerik egy klinikai próba folyamatát, illetve elenyésző esetben hallani részvételi lehetőségekről. 
+Jól látható, hogy a klinikai próbák résztvevőinek száma az esetek többségében kevesebb, mint 100. Ez részben köszöhető az ismeretek hiányának, hiszen nagyon kevesen ismerik egy klinikai próba folyamatát, illetve elenyésző esetben hallani részvételi lehetőségekről.
 
 6. `plot_trial_status(df, output_file)`
 
@@ -131,7 +131,7 @@ end
 
 ![](temporal_analysis_start_year.png)
 
-Az klinkai próbák többek között a szabályozottság kialakulása miatt a 2000-es évek után váltak egy hatalmas piaccá. Bár a grafikon a Covid-ot követő évekről nem tartalmaz információt, nyugodt lélekkel állíthatom, hogy erősen növekszik a klinikai próbák száma szűkebb jelenünkben is.
+Az klinikai próbák többek között a szabályozottság kialakulása miatt a 2000-es évek után váltak egy hatalmas piaccá. Bár a grafikon a Covid-ot követő évekről nem tartalmaz információt, nyugodt lélekkel állíthatom, hogy erősen növekszik a klinikai próbák száma szűkebb jelenünkben is.
 
 10. `analyze_summary_length(df)`
 
